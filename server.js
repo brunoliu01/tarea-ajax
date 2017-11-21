@@ -12,25 +12,19 @@ app.use(bodyParser.urlencoded({
 app.use("/", express.static("public"));
 
 app.get("/find", (request, response) => {
-	//console.log(request.query);
-    var data = {
-    	name: request.query.nombre,
-    	sex: request.query.sexo,
-    	message: request.query.mensaje,
-    	hobbies: request.query.hobbies
-    }
-    response.json({"method": "get", "success": true, "data": data});
+	console.log(request.query.nombre);
+    console.log(request.query.sexo);
+    console.log(request.query.mensaje);
+    console.log(request.query.hobbies);
+    response.json({"method": "get", "success": true});
 });
 
 app.post("/find", (request, response) => {
-    //console.log(request.body);
-    var data = {
-    	name: request.body.nombre,
-    	sex: request.body.sexo,
-    	message: request.body.mensaje,
-    	hobbies: request.body.hobbies
-    }
-    response.json({"method": "post", "success": true, "data": data});
+    console.log(request.body.nombre);
+    console.log(request.body.sexo);
+    console.log(request.body.mensaje);
+    console.log(request.body.hobbies);
+    response.json({"method": "post", "success": true});
 });
 
 app.listen(8080, function() {
