@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form method="GET">
+		<input for="nombre" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+
+		<p>
+		<input type="radio" name="gender" value="F" id="femenino">
+		<label for="femenino">Femenino</label>
+		<input type="radio" name="gender" value="M" id="masculino">
+		<label for="masculino">Masculino</label>
+		</p>
+
+		<textarea id="textA" name="mensaje" placeholder="Mensaje" required></textarea>
+
+		<p>
+		Hobbies:<br>
+		<input type="checkbox" name="hobbies" value="dormir" id="sleep"/>
+		<label for="sleep">Dormir</label>
+		<input type="checkbox" name="hobbies" value="peliculas" id="movies"/>
+		<label for="movies">Ver Películas</label>
+		<input type="checkbox" name="hobbies" value="bailar" id="dance"/>
+		<label for="dance">Bailar</label>
+		</p>
+		<input id="btn" type="submit" value="Registrar">
+	</form>
+<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
