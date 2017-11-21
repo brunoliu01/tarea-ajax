@@ -8,9 +8,8 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
-app.set('port', (process.env.PORT || 8080));
 
-app.use(express.static(__dirname + '/public'));
+app.use("/", express.static("public"));
 
 app.get("/find", (request, response) => {
 	//console.log(request.query);
@@ -34,6 +33,6 @@ app.post("/find", (request, response) => {
     response.json({"method": "post", "success": true, "data": data});
 });
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'));
+app.listen(8080, function() {
+  console.log("Listening on port 8080!");
 })
